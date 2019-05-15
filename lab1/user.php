@@ -1,26 +1,33 @@
 <?php
 class User
 {
-    var $id;
-    var $name;
-    var $avatar;
-    var $email;
-    var $email_verified_at;
-    var $role;
-    var $password;
-    var $remember_token;
-    var $created_at;
-    var $updated_at;
+    function __construct(){
+        $this->conn = new PDO("mysql:host=127.0.0.1;dbname=kaopiz;charset=utf8", 'root', '123456');
+    }
 
+    function exeQuery($sql){
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
+    }
 
-    function getList(){
-        echo "id: " . $this->id . "<br>";
-        echo "name: " . $this->name . "<br>";
-        echo "avatar: " . $this->avatar . "<br>";
-        echo "email_verified_at: " . $this->email_verified_at . "<br>";
+    function find(){
 
+    }
+    function get(){
+
+    } 
+    function save(){
+        
     }
 }
 
+
+$admin = new User();
+$sql = "select * from users where id = 1";
+
+
+var_dump($admin->exeQuery($sql));
 
 ?>
