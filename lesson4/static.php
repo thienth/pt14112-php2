@@ -7,7 +7,7 @@ class Product{
 	const TABLE_NAME = 'products';
 
 	public static function test(){
-		return static::$tableName;
+		return $this->tableName;
 	}
 }
 class User{
