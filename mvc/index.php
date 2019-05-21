@@ -6,7 +6,6 @@ $keyword = isset($_GET['keyword']) == true ? $_GET['keyword'] : "";
 $products = Product::where(['name', 'like', "%$keyword%"])
 					->get();
 
-
  ?>
 <form action="" method="get" >
 	
@@ -19,6 +18,7 @@ $products = Product::where(['name', 'like', "%$keyword%"])
  			<th>Tên sản phẩm</th>
  			<th>Ảnh</th>
  			<th>Giá</th>
+ 			<th>Tên danh mục</th>
  		</tr>
  	</thead>
  	<tbody>
@@ -29,6 +29,7 @@ $products = Product::where(['name', 'like', "%$keyword%"])
  				<img src="<?= $value->image?>" width="80">
  			</td>
  			<td><?= $value->price?></td>
+ 			<td><?= $value->getCateInfo()->cate_name?></td>
  		</tr>
  		<?php endforeach ?>
  		
