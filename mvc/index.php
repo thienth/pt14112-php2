@@ -2,14 +2,14 @@
 require_once './models/Product.php';
 require_once './models/Category.php';
 
-$keyword = isset($_GET['keyword']) == true ? $_GET['keyword'] : "";
+$keyword = isset($_POST['keyword']) == true ? $_POST['keyword'] : "";
 $products = Product::where(['name', 'like', "%$keyword%"])
 					->get();
 
  ?>
-<form action="" method="get" >
+<form action="" method="post" >
 	
-	<input type="text" name="keyword">
+	<input type="password" name="keyword">
 	<button type="submit">Search</button>
 </form>
  <table>
