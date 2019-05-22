@@ -18,8 +18,14 @@ switch ($url) {
 		$ctr->contact();
 		break;
 	case 'login':
+
 		$ctr = new HomeController();
-		$ctr->login();
+		if($_SERVER['REQUEST_METHOD'] == "GET"){
+			$ctr->login();	
+		}else{
+			$ctr->postLogin();
+		}
+		
 		break;
 	case 'admin':
 		$ctr = new AdminController();

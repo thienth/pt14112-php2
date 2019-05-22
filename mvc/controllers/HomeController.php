@@ -21,5 +21,9 @@ class HomeController
 	{
 		include_once './views/login.php';
 	}
+	function postLogin()
+	{
+		echo $_POST['username'] . "-" . $_POST['password'];
+	}
 }
  ?>
