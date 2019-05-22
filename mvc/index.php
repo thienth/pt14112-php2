@@ -1,37 +1,4 @@
 <?php 
-require_once './models/Product.php';
-require_once './models/Category.php';
-
-$keyword = isset($_POST['keyword']) == true ? $_POST['keyword'] : "";
-$products = Product::where(['name', 'like', "%$keyword%"])
-					->get();
+echo 1;
 
  ?>
-<form action="" method="post" >
-	
-	<input type="password" name="keyword">
-	<button type="submit">Search</button>
-</form>
- <table>
- 	<thead>
- 		<tr>
- 			<th>Tên sản phẩm</th>
- 			<th>Ảnh</th>
- 			<th>Giá</th>
- 			<th>Tên danh mục</th>
- 		</tr>
- 	</thead>
- 	<tbody>
- 		<?php foreach ($products as $key => $value): ?>
-		<tr>
- 			<td><?= $value->name?></td>
- 			<td>
- 				<img src="<?= $value->image?>" width="80">
- 			</td>
- 			<td><?= $value->price?></td>
- 			<td><?= $value->getCateInfo()->cate_name?></td>
- 		</tr>
- 		<?php endforeach ?>
- 		
- 	</tbody>
- </table>
