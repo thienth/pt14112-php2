@@ -1,9 +1,10 @@
 <?php 
-
+require_once './models/Product.php';
 class ProductController{
 
 	function listProduct(){
-		echo "day la danh sach san pham";
+		$products = Product::all();
+		include_once './views/product/list.php';
 	}
 }
 

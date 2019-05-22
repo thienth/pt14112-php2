@@ -17,5 +17,9 @@ class HomeController
 	{
 		echo "day la lien he";
 	}
+	function login()
+	{
+		include_once './views/login.php';
+	}
 }
  ?>

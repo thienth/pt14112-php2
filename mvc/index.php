@@ -17,6 +17,10 @@ switch ($url) {
 		$ctr = new HomeController();
 		$ctr->contact();
 		break;
+	case 'login':
+		$ctr = new HomeController();
+		$ctr->login();
+		break;
 	case 'admin':
 		$ctr = new AdminController();
 		$ctr->index();
