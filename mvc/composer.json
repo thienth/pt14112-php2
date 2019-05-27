@@ -6,7 +6,12 @@
             "email": "hung@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "illuminate/database": "*",
+        "jenssegers/blade": "^1.2",
+        "phroute/phroute": "^2.1"
+    },
     "autoload": {
         "psr-4": {
         	"Models\\": "models/",

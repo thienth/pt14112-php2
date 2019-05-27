@@ -5,8 +5,10 @@ use Models\Category;
 class ProductController{
 
 	function listProduct(){
+
 		$products = Product::all();
-		include_once './views/product/list.php';
+		var_dump($products);
+		// include_once './views/product/list.php';
 	}
 
 	public function addProduct(){

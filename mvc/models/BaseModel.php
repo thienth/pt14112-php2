@@ -1,8 +1,8 @@
 <?php 
 namespace Models;
-
+// use Illuminate\Database\Eloquent\Model;
 use \PDO;
-class BaseModel
+class BaseModel 
 {
 	
 	function __construct()
