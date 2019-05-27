@@ -1,6 +1,6 @@
 <?php 
 
-namespace Model;
+namespace Models;
 class Category extends BaseModel
 {
 	

@@ -1,0 +1,16 @@
+{
+    "name": "ginv2/mvc",
+    "authors": [
+        {
+            "name": "hung",
+            "email": "hung@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        	"Models\\": "models/",
+        	"Controllers\\": "controllers/"
+        }
+    }
+}

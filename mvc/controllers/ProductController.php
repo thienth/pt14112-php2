@@ -1,7 +1,7 @@
 <?php 
-namespace Controller;
-use Model\Product;
-use Model\Category;
+namespace Controllers;
+use Models\Product;
+use Models\Category;
 class ProductController{
 
 	function listProduct(){
