@@ -1,6 +1,7 @@
 <?php 
-require_once './models/Product.php';
-require_once './models/Category.php';
+namespace Controller;
+use Model\Product;
+use Model\Category;
 class ProductController{
 
 	function listProduct(){

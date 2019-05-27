@@ -1,7 +1,6 @@
 <?php 
 
-require_once './models/BaseModel.php';
-require_once './models/Category.php';
+namespace Model;
 class Product extends BaseModel
 {
 	

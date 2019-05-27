@@ -1,6 +1,6 @@
 <?php 
 
-require_once './models/BaseModel.php';
+namespace Model;
 class Category extends BaseModel
 {
 	
