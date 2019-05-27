@@ -35,6 +35,15 @@ switch ($url) {
 		$ctr = new ProductController();
 		$ctr->listProduct();
 		break;
+	case 'admin/products/add':
+		$ctr = new ProductController();
+		if($_SERVER['REQUEST_METHOD'] == "GET"){
+			$ctr->addProduct();	
+		}else{
+			$ctr->saveAddProduct();
+		}
+		
+		break;
 	
 	default:
 		echo "404 - duong dan khong ton tai";
