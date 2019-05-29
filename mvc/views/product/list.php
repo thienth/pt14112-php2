@@ -15,8 +15,9 @@
 		<tbody>
 			<?php foreach ($products as $key => $item): ?>
 			<tr>
+				<td><?= $item->id?></td>
 				<td><?= $item->name?></td>
-				<td><?= $item->getCateInfo()->cate_name?></td>
+				<td><?= $item->category->cate_name?></td>
 			</tr>
 			<?php endforeach ?>
 			

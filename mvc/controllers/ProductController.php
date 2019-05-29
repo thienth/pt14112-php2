@@ -5,10 +5,11 @@ use Models\Category;
 class ProductController{
 
 	function listProduct(){
-
+		Product::destroy(49);
 		$products = Product::all();
-		var_dump($products);
-		// include_once './views/product/list.php';
+							
+		// var_dump($products);
+		include_once './views/product/list.php';
 	}
 
 	public function addProduct(){
@@ -23,9 +24,15 @@ class ProductController{
 		$image = $_POST['image'];
 		$cate_id = $_POST['cate_id'];
 
-		$data = compact('name', 'price', 'image', 'cate_id');
 		$model = new Product();
-		$model->insert($data);
+
+		// $model = Product::find(52);
+		$model->name = $name;
+		$model->price = $price;
+		$model->image = $image;
+		$model->cate_id = $cate_id;
+
+		$model->save();
 
 		header('location: ./');
 		die;

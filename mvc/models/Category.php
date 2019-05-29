@@ -1,10 +1,11 @@
 <?php 
 
 namespace Models;
-class Category extends BaseModel
+use Illuminate\Database\Eloquent\Model as Eloquent;
+class Category extends Eloquent
 {
 	
-	public $tableName = "categories";
+	protected $table = "categories";
 }
 
  ?>

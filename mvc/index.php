@@ -2,6 +2,8 @@
 $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 
 require_once './bootstrap.php';
+// https://laravel.com/docs/5.8/eloquent
+// https://laravel.com/docs/5.8/eloquent-relationships
 
 use Controllers\HomeController;
 use Controllers\ProductController;
