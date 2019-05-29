@@ -1,7 +1,7 @@
 <?php 
 $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 
-require_once './vendor/autoload.php';
+require_once './bootstrap.php';
 
 use Controllers\HomeController;
 use Controllers\ProductController;
