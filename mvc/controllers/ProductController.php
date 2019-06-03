@@ -30,7 +30,6 @@ class ProductController extends BaseController
 		$model->cate_id = $cate_id;
 
 		$model->save();
-
 		header('location: ./');
 		die;
 
