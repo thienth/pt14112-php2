@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2>{{$book->name}}</h2>
-	<img src="{{getUrl($book->feature_image)}}" width="200">
+	<img src="{{$book->feature_image}}" width="200">
 	<br>
 	<p><b>Danh mục: <a href="{{getUrl('/?cate_id=' . $book->category->id)}}" title="">{{$book->category->name}}</a></b></p>
 	<p><b>Giá: ${{$book->price}}</b></p>

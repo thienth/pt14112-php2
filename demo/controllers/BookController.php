@@ -21,7 +21,7 @@ class BookController extends BaseController
 		if($feature_image['size'] > 0){
 			$filename = 'public/' .uniqid() .'-'. $feature_image['name'];
 			move_uploaded_file($feature_image['tmp_name'],  './'.$filename);
-			$imgLink = $filename;
+			$imgLink = getUrl($filename);
 		}
 		$model = new Book();
 		$model->name = $name;
