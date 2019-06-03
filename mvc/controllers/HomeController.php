@@ -1,12 +1,18 @@
 <?php 
 namespace Controllers;
-class HomeController
+use Models\Product;
+use Models\Category;
+
+class HomeController extends BaseController
 {
 	
 	function index()
 	{
-		echo "day la trang chu";
+		$products = Product::all();
+							
+		return $this->render('homepage', ['products' => $products]);
 	}
+
 	function about()
 	{
 		echo "day la gioi thieu";

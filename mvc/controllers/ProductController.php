@@ -2,20 +2,17 @@
 namespace Controllers;
 use Models\Product;
 use Models\Category;
-class ProductController{
+class ProductController extends BaseController
+{
 
-	function listProduct(){
-		Product::destroy(49);
-		$products = Product::all();
-							
-		// var_dump($products);
-		include_once './views/product/list.php';
+	function detail($id, $name){
+		
+		echo $id . $name;die;
 	}
 
-	public function addProduct(){
-		$cates = Category::all();
-
-		include_once './views/product/add.php';
+	public function remove($id){
+		Product::destroy($id);
+		header('location: ' . getUrl('/'));
 	}
 
 	public function saveAddProduct(){
