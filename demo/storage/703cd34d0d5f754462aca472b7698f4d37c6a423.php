@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2><?php echo e($book->name); ?></h2>
-	<img src="<?php echo e(getUrl($book->feature_image)); ?>" width="200">
+	<img src="<?php echo e($book->feature_image); ?>" width="200">
 	<br>
 	<p><b>Danh mục: <a href="<?php echo e(getUrl('/?cate_id=' . $book->category->id)); ?>" title=""><?php echo e($book->category->name); ?></a></b></p>
 	<p><b>Giá: $<?php echo e($book->price); ?></b></p>
